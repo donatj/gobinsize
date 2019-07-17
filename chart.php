@@ -10,7 +10,7 @@ foreach($binaries as $bin) {
 	}
 
 	$parts = explode('.', $bin, 2);
-	$data[$parts[0]][$parts[1]] = filesize("./output/" . $bin) / 1000000;
+	$data[$parts[0]][$parts[1]] = number_format(filesize("./output/" . $bin) / 1000000, 3);
 
 	uksort($data[$parts[0]], "version_compare");
 }
