@@ -13,7 +13,7 @@ do
 	docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" go build -o output/hello."$VER" ./hello
 	docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" go build -o output/hello-nofmt."$VER" ./hello-nofmt
 
-	docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/imgavg && go build -o output/imgavg.$VER github.com/donatj/imgavg"
-	docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/sqlread/cmd/sqlread && go build -o output/sqlread.$VER github.com/donatj/sqlread/cmd/sqlread"
-	docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/hookah/cmd/hookah && go build -o output/hookah.$VER github.com/donatj/hookah/cmd/hookah"
+	docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" go build -o output/imgavg."$VER" ./imgavg
+	# docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/sqlread/cmd/sqlread && go build -o output/sqlread.$VER github.com/donatj/sqlread/cmd/sqlread"
+	# docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/hookah/cmd/hookah && go build -o output/hookah.$VER github.com/donatj/hookah/cmd/hookah"
 done
