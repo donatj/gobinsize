@@ -18,7 +18,7 @@ do
 	build $VER hello hello
 	build $VER hello-nofmt hello-nofmt
 	build $VER github.com/donatj/imgavg imgavg
+	build $VER github.com/donatj/sqlread/cmd/sqlread sqlread
+	build $VER github.com/donatj/hookah/cmd/hookah hookah
 
-	# docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/sqlread/cmd/sqlread && go build -o output/sqlread.$VER github.com/donatj/sqlread/cmd/sqlread"
-	# docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp golang:"$VER" /bin/bash -c "go get -d github.com/donatj/hookah/cmd/hookah && go build -o output/hookah.$VER github.com/donatj/hookah/cmd/hookah"
 done

@@ -4,8 +4,7 @@
 /gopath/bin
 /gopath/pkg
 
-/gopath/**/.git
-/gopath/**/.github
+/gopath/**/.git*
 
 /gopath/**/README.md
 /gopath/**/*_test.go
