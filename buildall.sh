@@ -8,6 +8,7 @@ mkdir -p output
 rm -f output/*
 
 build() {
+	rm -rf gopath/bin gopath/pkg || echo "No bin or pkg directories to remove"
 	docker run --rm -e GOPATH=/usr/src/myapp/gopath -v "$PWD":/usr/src/myapp -w /usr/src/myapp/gopath/src/"$2" golang:"$1" /bin/bash -c "go get && go build -o /usr/src/myapp/output/$3.$1"
 }
 
