@@ -1,2 +1,11 @@
 /output
 *.tsv
+
+/gopath/bin
+/gopath/pkg
+
+/gopath/**/.git
+/gopath/**/.github
+
+/gopath/**/README.md
+/gopath/**/*_test.go
